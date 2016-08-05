@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Chinese Buffet - Payment</title>
+
+</head>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="https://test.sagepay.com/api/v1/js/sagepay-dropin.js"></script>
+    <script src="https://test.sagepay.com/api/v1/js/sagepay.js"></script>
+<body>
+    <div id="main">
+      <h1>My Test Shop</h1>
+      <form id="checkout-form" method="post">
+        <div id="sp-container"></div>
+          <div id="submit-container">
+          <input type="submit">
+        </div>
+        <script type="text/javascript" src="https://test.sagepay.com/api/v1/js/sagepay-dropin.js"></script>
+        
+    
+</form>
+    </div>
+</body>
+    <script>
+        /**
+*
+*  Base64 encode / decode
+*  http://www.webtoolkit.info/
+*
+**/
+        var Base64 = {
+
+            // private property
+            _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+
+            // public method for encoding
+            encode: function (input) {
+                var output = "";
+                var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+                var i = 0;
+
+                input = Base64._utf8_encode(input);
+
+                while (i < input.length) {
+
+                    chr1 = input.charCodeAt(i++);
+                    chr2 = input.charCodeAt(i++);
+                    chr3 = input.charCodeAt(i++);
+
+                    enc1 = chr1 >> 2;
+                    enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+                    enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+                    enc4 = chr3 & 63;
+
+                    if (isNaN(chr2)) {
+                        enc3 = enc4 = 64;
+                    } else if (isNaN(chr3)) {
+                        enc4 = 64;
+                    }
+
+                    output = output +
+                    this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) +
+                    this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+
+                }
+
+                return output;
+            },
+
+            // public method for decoding
+            decode: function (input) {
+                var output = "";
+                var chr1, chr2, chr3;
+                var enc1, enc2, enc3, enc4;
+                var i = 0;
+
+                input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+                while (i < input.length) {
+
+                    enc1 = this._keyStr.indexOf(input.charAt(i++));
+                    enc2 = this._keyStr.indexOf(input.charAt(i++));
+                    enc3 = this._keyStr.indexOf(input.charAt(i++));
+                    enc4 = this._keyStr.indexOf(input.charAt(i++));
+
+                    chr1 = (enc1 << 2) | (enc2 >> 4);
+                    chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+                    chr3 = ((enc3 & 3) << 6) | enc4;
+
+                    output = output + String.fromCharCode(chr1);
+
+                    if (enc3 != 64) {
+                        output = output + String.fromCharCode(chr2);
+                    }
+                    if (enc4 != 64) {
+                        output = output + String.fromCharCode(chr3);
+                    }
+
+                }
+
+                output = Base64._utf8_decode(output);
+
+                return output;
+
+            },
+
+            // private method for UTF-8 encoding
+            _utf8_encode: function (string) {
+                string = string.replace(/\r\n/g, "\n");
+                var utftext = "";
+
+                for (var n = 0; n < string.length; n++) {
+
+                    var c = string.charCodeAt(n);
+
+                    if (c < 128) {
+                        utftext += String.fromCharCode(c);
+                    }
+                    else if ((c > 127) && (c < 2048)) {
+                        utftext += String.fromCharCode((c >> 6) | 192);
+                        utftext += String.fromCharCode((c & 63) | 128);
+                    }
+                    else {
+                        utftext += String.fromCharCode((c >> 12) | 224);
+                        utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+                        utftext += String.fromCharCode((c & 63) | 128);
+                    }
+
+                }
+
+                return utftext;
+            },
+
+            // private method for UTF-8 decoding
+            _utf8_decode: function (utftext) {
+                var string = "";
+                var i = 0;
+                var c = c1 = c2 = 0;
+
+                while (i < utftext.length) {
+
+                    c = utftext.charCodeAt(i);
+
+                    if (c < 128) {
+                        string += String.fromCharCode(c);
+                        i++;
+                    }
+                    else if ((c > 191) && (c < 224)) {
+                        c2 = utftext.charCodeAt(i + 1);
+                        string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+                        i += 2;
+                    }
+                    else {
+                        c2 = utftext.charCodeAt(i + 1);
+                        c3 = utftext.charCodeAt(i + 2);
+                        string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+                        i += 3;
+                    }
+
+                }
+
+                return string;
+            }
+
+        }
+        var testapi = "https://test.sagepay.com/api/v1";
+        var liveapi = "https://live.sagepay.com/api/v1";
+        var merchantSessionKey = "";
+        var expiry = "";
+        var cardIdentifier = "";
+        var authorize = "";
+        var vendorName = "thechinesebuffe";
+        $(document).ready(function () {
+            var integrationKey = "SrYaN37PeG4FOJpIOX0NlyWseVDnkFhJviStR9oYJVagWN6kkZ";
+            var integrationPassword = "MVT3KyBM13UStkgQmOb3xMTjJ0eaon63WOez8sFYkF9xPLdezJqH0KuYKneDuTw0G";
+            authorize = integrationKey + ":" + integrationPassword;
+            authorize = btoa(authorize);
+            getmerchantsessionkey(authorize);
+            
+        });
+        function getmerchantsessionkey(authorize) {
+            $.ajax({
+                url: testapi + "/merchant-session-keys",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic " + authorize);
+                },
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                processData: false,
+                data: '{"vendorName": "'+vendorName+'"}',
+                success: function (result) {
+                    merchantSessionKey = result.merchantSessionKey;
+                    expiry = result.expiry;
+                    var html = $("#checkout-form").html();
+                    html = html.replace("{ReplaceWithMerchantSessionKey}", merchantSessionKey);
+                    $("#checkout-form").html(html);
+                    sagepayCheckout({
+                        merchantSessionKey: merchantSessionKey,
+                        onTokenise: myTokenisationHandler
+                    }).form({ form: '#checkout-form' });
+                    //sagepayCheckout();
+                },
+                error: function (e) {
+                    alert("Cannot get data");
+                }
+            });
+        }
+        function submitpayment() {
+            var uniqueID = Math.floor(Math.random() * 900000) + 100000;
+            var data = {};
+            data.transactionType = "Payment";
+            data.paymentMethod = '{"card": {"merchantSessionKey": "' + merchantSessionKey + '","cardIdentifier": "' + cardIdentifier + '"}';
+            data.vendorTxCode = "demotransaction-<" + Math.floor(Math.random() * 900000) + 100000 + ">";
+            data.amount = 10000;
+            data.currency = "GBB";
+            data.description = "Demo transaction";
+            data.apply3DSecure= "UseMSPSetting";
+            data.customerFirstName = "Sam";
+            data.customerLastName= "Jones";
+            data.billingAddress = '{"address1": "407 St. John Street","city": "London","postalCode": "EC1V 4AB","country": "GB"}';
+            data.entryMethod = "Ecommerce";
+            $.ajax({
+                url: testapi + "/transactions",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic " + authorize);
+                },
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                processData: false,
+                //data:JSON.stringify(data),
+                data:'{"transactionType": "Payment","paymentMethod": {"card": {"merchantSessionKey": "'+merchantSessionKey+'","cardIdentifier": "'+cardIdentifier+'"}},"vendorTxCode": "demotransaction-'+uniqueID+'","amount": 10000,"currency": "GBP","description": "Demo transaction","apply3DSecure": "UseMSPSetting","customerFirstName": "Sam","customerLastName": "Jones","billingAddress": {"address1": "407 St. John Street","city": "London","postalCode": "EC1V 4AB","country": "GB"},"entryMethod": "Ecommerce"}',
+                success: function (result) {
+                    var url = result.acsUrl;
+                    
+                    var TermUrl = "http://thechinesebuffet.com/Confirm.aspx";
+                    var PaReq=encodeURIComponent(result.paReq);
+                    var MD = result.transactionId;
+                    
+                    url = url + "&TermUrl=" + TermUrl + "&PaReq=" + PaReq + "&MD="+MD;
+                    var form = $('<form action="' + url + '" method="post">' +
+                      '</form>');
+                    $('body').append(form);
+                    form.submit();
+                    //window.location = url;
+                    //$.ajax({
+                    //    url: url,
+                    //    beforeSend: function (xhr) {
+                    //        xhr.setRequestHeader("Authorization", "Basic " + authorize);
+                    //    },
+                    //    type: 'POST',
+                    //    dataType: 'json',
+                    //    contentType: 'application/json',
+                    //    processData: false,
+                    //    //data:JSON.stringify(data),
+                    //    data: '{"TermUrl": "' + TermUrl + '","PaReq":"'+PaReq+'","MD":"'+75+'"}',
+                    //    success: function (result) {
+
+                    //    },
+                    //    error: function (e) {
+                    //        alert("Cannot get data");
+                    //    }
+                    //});
+                    //alert(JSON.stringify(result));
+                    //ThreeDsecure(result.paReq,result.transactionId);
+                    //window.location = url;
+                },
+                error: function (e) {
+                    alert("Cannot get data");
+                }
+            });
+        }
+        function ThreeDsecure(req,transID)
+        {
+            $.ajax({
+                url: testapi + "/transactions/"+transID+"/3d-secure",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic " + authorize);
+                },
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                processData: false,
+                //data:JSON.stringify(data),
+                data: '{"paRes": "'+req+'"}',
+                success: function (result) {
+                    
+                },
+                error: function (e) {
+                    alert("Cannot get data");
+                }
+            });
+
+        //    curl https://test.sagepay.com/api/v1/transactions/<transactionId>/3d-secure \
+        //    -H "Authorization: Basic ZHE5dzZXa2tkRDJ5OGszdDRvbHF1OEg2YTB2dHQzSVk3VkVzR2hBdGFjYkNaMmI1VWQ6aG5vM0pURXdESHk3aEpja1U0V3V4ZmVUcmpEME45MnBJYWl0dVFCdzVNdGo3UkczVjh6T2RIQ1NQS3dKMDJ3QVY="  \
+        //    -H "Content-type: application/json" \
+        //    -X POST \
+        //    -d '{ 
+        //    "paRes": "eJylV1tzqkgQfvdXpNxHKuEioKSIW8NFhAgCIipvBAcEERAQ0F+/aEzMyZ7d2rhUUdJtX76vp3sG2D+bXfxQwbwI0+Sliz9h3QeYeOk6TIKX7twaPQ66fw47rLXJIRRm0DvkcMiqsCjcAD6E65cugeEkSQ8wiuwxGNHHu0NWByYsLn9mbg6LZ+yJYaj+gKIGPYYc9Frb1uiac9imfMJZ9ENsY+fexk3KIet6e07WhiRDMBjGoleR3cFcFoY40YYjBgyLvsssenPUD+enogXahOuhkjN9Pa34hMCPgAqaZrQfh7uVECH1C4ueLdi1W8JhS4TCcYx+wLFnovdMtaEvejY7hwO79NDGxlsgX2W2LUjeFuw4HBA0i35KLGyyNIGtBcGin88seoOWucmV2vvVep9VrLUcsmW4+xVPD3/G+yx60bNF6ZaHYrhi0esT67lVNQQAcMA0qW0Nvl8tz4sJC71wiFEtovb34gXiIM3DcrM74/xVwaJnKOhlMdsSFc+zMEjafDl8aHsmKZ7XxUt3U5bZM4rWdf1U957SPECJlguKMWhrsy7C4I9u2z1XZ7iWEz+9x5t3kzQJPTcOT27ZtokKy026fvgE+7tQlnmOhqOmyD+24R49nEwezxqsh1Pdn6FAbyQuFfgv+b8HyQv3sdi4+H2pTejDc2vBh7kpv3R/GOQ9hpW7SeGn+a74X94/ow2TCsZpBtePxUf17qvAf8z/r8v+x6J149Pdrp3G4g4Y6C9VfMclhAEsyns64v5ueM9pu/Hhp8Po9Rm8MAwJGb9WmdPbYFlivOpYVu3Ilwu9L6GvhD9b7yrfRvnbVNyDp+O7h52iRINmsDDX1siQMKOitTEI7NqNS4mmhXDQZPN8V2Oq/4bFB0WndyLl9v0tR0oyPcKdCWT2vT7hhh3PEwtq76JYJUl7hIHgpGexjc1xS+IgiBtfCQ+yGlmDDNfM0HkVhR0lRpUyxQLSXc2qus6W64rAyfhEdHRGOyXC6qTjO7+MbWWFky+3CtwYv1fhFR7v3d2WFMYIbune68vDvAz9dnssf1x9VZZ5zeJ54NABqGUOAFk0wNxxIqBxwXa/2YYSU2McMOYjIHC+ahQ1b6wEu20hsVbs2UnUVYBJAJ+LHZ5TJUtiDk57fzEct4Yj2xKnKqgvhvxGHc3HSrUeB40YAYMLNJsDhcXb3PGtZ5KyiBud2RcH0Hw61OONp6mCUauWiKkWOGqRQSzOupNYa1Fr+aGLbmg7v4N7L9rO7+D+E9rAGdSCsVJeU0feVJ4GDJHjDCAEKwyosqR0QCpx4LWF5CWELmHOdmOJJE/QFh17M8xaT8jpSJ97ES26LiVoajAf487Si5YpclxNbEpBw71tb72gmBmdPC3oEMdzLZF6/gbRk+kibYpdYASUa3kkatERkjuQ95I3Z7wFr9VoChyDiHs4crAXadBMKL10ZW9JVJtO0NN525VTEAm9KY00SDiwZ40cg0Bt20T8Tmv0TksEUdIr+dm0dyD0SK9neZBtZ53j1BOker8Oj3VoaxliVttjeQC9fL4n7cSBdoiTxgFr0BMqIvONyHARHVlzaG6ILcNUg6PP7T1+cVjFA6cDRpJoWf4SQMetimmgFNMij5pYQxBfPtJJf3oKRAJoZb6hZ9LbQmiSUDGFKhuN2oa2QnqbyyfaVytavA70tyka3rTnufwc8Ls2uMvpPQP/x11N14f48ONTOxUM5+ivBm/mbjZSrWDylul7u5mYGlYF5Jwxj3pqZvlWxY6c4dvx+qjBqK8E5XKbIK+ZvTCPfKPwh/C0n3SWi4Lw3tbImEQ8yo2ko8vxQpxpp4jR9zpdxqRyXJdbaID9YE5yseAu/SVN2W4oiNUWwdNN47uIJHgDxe6kYcCrutfP+2N60tgTMZxfV+JK9Z23eH1x/iFxYADuEuzD/+Mgu63CVfN38Xqs/bLLXz4uLl8855fir19CfwGvWEqk"
+        //}'
+        }
+        function myTokenisationHandler(e) {
+            cardIdentifier = e.cardIdentifier;
+            submitpayment();
+        }
+    </script>
+    <script type="text/javascript">
+        
+        
+    </script>
+    <style>
+      body * {
+          font-family: sans-serif;
+      }
+      h1 {
+
+      }
+      input {
+          font-size:12pt;
+      }
+      #main {
+          width: 550px;
+          margin: 0 auto;
+      }
+      #submit-container {
+          padding-top:10px;
+          float:right;
+      }
+      input[type=submit] {
+          border:none;
+          background:indigo;
+          padding:10px;
+          color:white;
+          border-radius:5px;
+      }
+    </style>
+</html>

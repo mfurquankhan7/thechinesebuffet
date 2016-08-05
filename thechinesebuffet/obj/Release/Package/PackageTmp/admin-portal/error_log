@@ -1,0 +1,9 @@
+[21-May-2016 07:43:12 Etc/GMT] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/flglocaljunction/public_html/beta/admin-portal/connection.php on line 6
+[21-May-2016 07:44:58 Etc/GMT] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/flglocaljunction/public_html/beta/admin-portal/connection.php on line 6
+[21-May-2016 07:45:01 Etc/GMT] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/flglocaljunction/public_html/beta/admin-portal/connection.php on line 6
+[21-May-2016 07:45:43 Etc/GMT] PHP Notice:  Undefined variable: profilePic in /home/flglocaljunction/public_html/beta/admin-portal/sources/user-details-right.php on line 3
+[21-May-2016 07:45:43 Etc/GMT] PHP Notice:  Undefined variable: profilePic in /home/flglocaljunction/public_html/beta/admin-portal/sources/user-details-right.php on line 9
+[21-May-2016 07:45:43 Etc/GMT] PHP Notice:  Undefined variable: profilePic in /home/flglocaljunction/public_html/beta/admin-portal/sources/user-details-left.php on line 3
+[24-Jun-2016 06:03:05 Etc/GMT] PHP Notice:  Undefined variable: profilePic in /home/flglocaljunction/public_html/admin-portal/sources/user-details-right.php on line 3
+[24-Jun-2016 06:03:05 Etc/GMT] PHP Notice:  Undefined variable: profilePic in /home/flglocaljunction/public_html/admin-portal/sources/user-details-right.php on line 9
+[24-Jun-2016 06:03:05 Etc/GMT] PHP Notice:  Undefined variable: profilePic in /home/flglocaljunction/public_html/admin-portal/sources/user-details-left.php on line 3

@@ -1,0 +1,445 @@
+.aboutus-bg {
+    background: #f4f3f3 url(../images/bgs/aboutus-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+.ourteam-bg {
+    background: #f4f3f3 url(../images/bgs/ourteam-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+.menu-bg {
+    background: #f4f3f3 url(../images/bgs/menu-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+.careers-bg {
+    background: #f4f3f3 url(../images/bgs/careers-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+.offiers-bg {
+    background: #f4f3f3 url(../images/bgs/special-offers.jpg) no-repeat top center;
+    background-size: cover;
+}
+.media-bg {
+    background: #f4f3f3 url(../images/bgs/media-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+.first-div {
+    padding: 120px 0 50px 0;
+}
+h1 {
+    min-width: 340px;
+    height: 70px;
+    text-align: center;
+    margin: 0;
+    padding: 17px 0 0 0;
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    background: url(../images/layout/heading-bg.png) no-repeat top center;
+}
+.short-content {
+    width: calc(100% - 400px);
+    height: auto;
+    float: left;
+    font-size: 14px;
+    color: #999;
+    padding: 0 200px;
+    text-align: center;
+}
+.short-content a:link,
+.short-content a:visited {
+    color: #910029;
+}
+.short-content a:hover {
+    color: #000;
+}
+article p {
+    margin: 5px 0 20px 0;
+}
+.body-text {
+    font-size: 14px;
+    color: #000;
+}
+.body-title {
+    font-size: 16px;
+    color: #666;
+}
+.body-text ul {
+    padding: 10px 0 10px 20px;
+    margin: 0;
+}
+.body-text ul li {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 15px;
+}
+.restaurant-short {
+    width: auto;
+    height: auto;
+    float: left;
+    padding: 20px;
+    font-size: 14px;
+    color: #000;
+    line-height: 20px;
+    margin: 0;
+}
+.phone {
+    font-size: 20px;
+    color: #cc265a;
+    padding: 10px 0;
+}
+.media-details {
+    width: 800px;
+    display: none;
+}
+.media-details img {
+    float: left;
+    margin-right: 20px;
+}
+.media-details h3 {
+    font-size: 16px;
+}
+.media-details span {
+    font-size: 12px;
+}
+.buffet h3 {
+    font-size: 22px;
+    color: #910029;
+    font-weight: 400;
+}
+.buffet-header-left {
+    width: calc(60% - 20px);
+    height: auto;
+    float: left;
+    background-color: #CCC;
+    color: #111;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.buffet-header-right {
+    width: calc(40% - 20px);
+    height: auto;
+    float: left;
+    background-color: #CCC;
+    color: #111;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.buffet-content-left {
+    width: calc(60% - 20px);
+    height: auto;
+    float: left;
+    color: #111;
+    padding: 10px;
+}
+.buffet-content-right {
+    width: calc(40% - 20px);
+    height: auto;
+    float: left;
+    color: #111;
+    padding: 10px;
+}
+.bg-white {
+    background-color: #fff;
+}
+.bg-gray {
+    background-color: #eee;
+}
+.buffet-footer {
+    width: calc(100% - 20px);
+    height: auto;
+    float: left;
+    color: #111;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #999;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+}
+#reservation-outer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100000;
+}
+#reservation-inner-grid {
+    top: 30%;
+    width: 50%;
+    height: 300px;
+    left: 20%;
+    padding: 30px;
+    position: absolute;
+    background-color: #ccc;
+    color: black;
+}
+#reservation-inner-details {
+    top: 25%;
+    width: 50%;
+    height: 380px;
+    padding: 30px;
+    left: 20%;
+    position: absolute;
+    background-color: #ccc;
+    color: black;
+}
+#reservation-inner-askpayment {
+    top: 30%;
+    width: 50%;
+    height: 200px;
+    padding: 30px;
+    left: 20%;
+    position: absolute;
+    background-color: #ccc;
+    color: black;
+}
+#reservation-inner-dopayment {
+    top: 15%;
+    width: 50%;
+    height: 450px;
+    padding: 30px;
+    left: 20%;
+    position: absolute;
+    background-color: #ccc;
+    color: black;
+}
+#reservation-inner-additionalinfo {
+    top: 0%;
+    width: 50%;
+    z-index: 1000000;
+    height: 450px;
+    padding: 30px;
+    left: 0%;
+    position: absolute;
+    background-color: #ccc;
+    color: black;
+}
+#reservation-inner-confirmpayment {
+    top: 30%;
+    width: 50%;
+    height: 300px;
+    padding: 30px;
+    left: 20%;
+    position: absolute;
+    background-color: #ccc;
+    color: black;
+}
+.red {
+    background-color: Red !important;
+    color: #ffffff !important;
+}
+.green {
+    background-color: Green !important;
+    color: #ffffff !important;
+}
+.spangrid {
+    border: 1px solid #CCC;
+    font-size: 18px;
+    padding: 5px;
+}
+.gridouter {
+    padding: 15px;
+}
+#customerDetails td {
+    color: black;
+}
+button {
+    background: #8f0a06;
+    width: 100px;
+    color: #fff;
+    border: 1px solid #CCC;
+    font-size: 16px;
+    padding: 5px;
+}
+#booked-id {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*.specialofferIMG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.newsImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+.newsImgInside {
+    width: 300px;
+    height: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.specialofferImgInside {
+    width: 300px;
+    height: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+#loading-screen {
+    z-index: 1000000;
+}
+select::-ms-expand {
+    display: none;
+}
+
+/*SMART BOX START*/
+
+
+/*Messagebox */
+
+.divMessageBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*background: rgba(0,0,0,0.6);*/
+    z-index: 100000;
+}
+.MessageBoxContainer {
+    position: relative;
+    top: 35%;
+    color: white;
+    position: relative;
+    width: 30%;
+    left: 35%;
+    text-align: center;
+    background-color: #232323;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+.MessageBoxMiddle {
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+.MessageBoxMiddle .MsgTitle {
+    letter-spacing: -1px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.MessageBoxMiddle .pText {
+    font-size: 15px;
+    word-wrap: break-word;
+}
+.MessageBoxContainer input {
+    width: 50%;
+    padding: 5px;
+}
+.MessageBoxContainer select {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.MessageBoxButtonSection {
+    width: 75%;
+    height: 30px;
+}
+.MessageBoxButtonSection button {
+    float: right;
+    margin-right: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* End of MessageBox */
+
+#customerDetails input {
+    width: 200px !important;
+}
+#customerDetails textarea {
+    width: 200px !important;
+}
+@media screen and (min-width:768px) and (max-width:1150px) {
+    h1 {
+        height: auto;
+        margin: 0 0 10px 0;
+        min-width: 100%;
+        color: #910029;
+        background: none;
+        font-weight: 600;
+    }
+    .first-div {
+        padding: 50px 0;
+    }
+    .short-content {
+        width: 100%;
+        padding: 0;
+    }
+    footer {
+        min-height: 60px;
+    }
+    .MessageBoxContainer {
+        top: 40%;
+        width: calc(100% - 40px);
+        left: 0;
+    }
+    #reservation-inner-grid,
+    #reservation-inner-details,
+    #reservation-inner-askpayment,
+    #reservation-inner-dopayment,
+    #reservation-inner-confirmpayment {
+        top: 25%;
+        width: calc(100% - 60px);
+        height: auto;
+        padding: 30px;
+        left: 0;
+    }
+}
+@media screen and (max-width:767px) {
+    h1 {
+        height: auto;
+        margin: 0 0 10px 0;
+        min-width: 100%;
+        color: #910029;
+        background: none;
+        font-weight: 600;
+    }
+    .first-div {
+        padding: 50px 0;
+    }
+    .short-content {
+        width: 100%;
+        padding: 0;
+    }
+    footer {
+        min-height: 60px;
+    }
+    #reservation-inner-dopayment {
+        top: 15%;
+        width: calc(100% - 60px);
+        height: auto;
+        left: 0;
+    }
+    .MessageBoxContainer {
+        top: 40%;
+        width: calc(100% - 40px);
+        left: 0;
+    }
+    #reservation-inner-grid,
+    #reservation-inner-details,
+    #reservation-inner-askpayment,
+    #reservation-inner-dopayment,
+    #reservation-inner-confirmpayment {
+        top: 15%;
+        width: calc(100% - 60px);
+        height: auto;
+        padding: 30px;
+        left: 0;
+    }
+}

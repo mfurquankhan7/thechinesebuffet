@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Routing>
+  <route name="home" key="home" url="~/html/home.html" />
+  <route name="login" key="login" url="~/v1/user/login.aspx" />
+  <route name="dashboard" key="dashboard" url="~/v1/user/dashboard.aspx" />
+  <route name="messages" key="messages" url="~/v1/user/messages.aspx" />
+  <route name="fb-pages" key="fb-pages" url="~/v1/user/fbpages.aspx" />
+  <route name="fb-posts" key="fb-posts" url="~/v1/user/fbposts.aspx" />
+  <route name="fb-accounts" key="fb-accounts" url="~/v1/user/fb-accounts.aspx" />
+  <route name="redirect" key="redirect" url="~/public/redirector.aspx" />
+  <route name="associateaccess" key="associateaccess" url="~/public/getbfaccess.aspx?forwhat=associates" />
+  <route name="accessthanks" key="accessthanks" url="~/public/thankyou.aspx" />
+  <route name="clients" key="clients" url="~/v1/admin/clients.aspx" />
+</Routing>

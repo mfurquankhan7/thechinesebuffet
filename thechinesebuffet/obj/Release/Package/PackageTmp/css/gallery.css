@@ -1,0 +1,58 @@
+#item-grid {
+    max-width: calc(100% - 10px);
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+.item {
+    width: 340px;
+    height: auto;
+    float: left;
+    margin: 10px;
+    opacity: 1;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.item:hover {
+    opacity: 0.8;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.item img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.food {
+    display: block;
+}
+.interior {
+    display: none;
+}
+@media screen and (min-width:768px) and (max-width:1150px) {
+    #item-grid {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 0 50px 0;
+    }
+    .item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width:767px) {
+    #item-grid {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 0 50px 0;
+    }
+    .item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

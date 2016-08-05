@@ -1,0 +1,345 @@
+.menu-select {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 0 15px;
+}
+.menu-select select {
+    width: 245px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #910029 url(../images/layout/down-arrow.png) no-repeat right center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.menu-select select:hover {
+    cursor: pointer;
+}
+.book-table-outer {
+    width: auto;
+    height: 500px;
+    position: fixed;
+    bottom: -460px;
+    display: block;
+    right: 20px;
+    z-index: 10000;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.form-outer-container {
+    width: 250px;
+    height: 45px;
+    float: right;
+}
+.form-container {
+    width: 250px;
+    height: auto;
+    min-height: 200px;
+    float: right;
+}
+.form-container .header {
+    background-color: #910029;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -khtml-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.form-container .header:hover {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.form-container .form {
+    width: calc(100% - 30px);
+    height: auto;
+    float: left;
+    padding: 15px;
+    background-color: #fff;
+}
+.form-container .form .form-row {
+    margin: 5px 0;
+}
+.form-container .form .form-row select {
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+.form-container .form .form-row input[type="text"],
+.form-container .form .form-row input[type="email"],
+.form-container .form .form-row input[type="number"],
+.form-container .form .form-row textarea {
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    width: calc(100% - 22px);
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif;
+}
+.form-container .form .form-row input[type="text"]:focus,
+.form-container .form .form-row input[type="email"]:focus,
+.form-container .form .form-row input[type="number"]:focus,
+.form-container .form .form-row textarea:focus,
+.form-container .form .form-row select:focus {
+    box-shadow: 0 0 5px rgba(145, 0, 41, 1);
+    border: 1px solid rgba(145, 0, 41, 1);
+}
+.form-container .form .form-row .form-field-common {
+    color: #333;
+    font-size: 12px;
+}
+.form-container .form .form-row .submit {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #910029;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.form-container .form .form-row .submit:hover {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.form-container .form .form-row a:link,
+.form-container .form .form-row a:visited {
+    color: #910029;
+    margin: 0 0 0 10px;
+    text-decoration: underline;
+}
+.form-container .form .form-row a:hover {
+    color: #000;
+    text-decoration: none;
+}
+#couldnotbook .form-row {
+    margin: 5px 0;
+}
+#couldnotbook .form-row select {
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+#couldnotbook .form-row input[type="text"],
+#couldnotbook .form-row input[type="email"],
+#couldnotbook .form-row input[type="number"],
+#couldnotbook .form-row textarea {
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    width: calc(100% - 22px);
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif;
+}
+#couldnotbook .form-row input[type="text"]:focus,
+#couldnotbook .form-row input[type="email"]:focus,
+#couldnotbook .form-row input[type="number"]:focus,
+#couldnotbook .form-row textarea:focus,
+#couldnotbook .form-row select:focus {
+    box-shadow: 0 0 5px rgba(145, 0, 41, 1);
+    border: 1px solid rgba(145, 0, 41, 1);
+}
+#couldnotbook .form-row .form-field-common {
+    color: #333;
+    font-size: 12px;
+}
+#couldnotbook .form-row .submit {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #910029;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+#couldnotbook .form-row .submit:hover {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.applyform .form-row {
+    width: calc(50% - 30px);
+    height: auto;
+    float: left;
+    padding: 15px;
+}
+.applyform .form-row select {
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+.applyform .form-row input[type="text"],
+.applyform .form-row input[type="email"],
+.applyform .form-row input[type="number"],
+.applyform .form-row textarea {
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    width: calc(100% - 22px);
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif;
+}
+.applyform .form-row input[type="text"]:focus,
+.applyform .form-row input[type="email"]:focus,
+.applyform .form-row input[type="number"]:focus,
+.applyform .form-row textarea:focus,
+.applyform .form-row select:focus {
+    box-shadow: 0 0 5px rgba(145, 0, 41, 1);
+    border: 1px solid rgba(145, 0, 41, 1);
+}
+.applyform .form-row .form-field-common {
+    color: #333;
+    font-size: 12px;
+}
+.applyform .form-row .submit {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #910029;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.applyform .form-row .submit:hover {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+@media screen and (min-width:768px) and (max-width:1150px) {
+    .book-table-outer {
+        display: block;
+    }
+    .menu-select {
+        margin: 5px 0;
+        width: 100%;
+    }
+    .menu-select select {
+        width: 100%;
+    }
+    .applyform .form-row {
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+    .book-table-outer {
+        right: 10px;
+    }
+}
+@media screen and (max-width:767px) {
+    .book-table-outer {
+        display: block;
+    }
+    .menu-select {
+        margin: 5px 0;
+        width: 100%;
+    }
+    .menu-select select {
+        width: 100%;
+    }
+    .applyform .form-row {
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+    .book-table-outer {
+        right: 10px;
+    }
+}

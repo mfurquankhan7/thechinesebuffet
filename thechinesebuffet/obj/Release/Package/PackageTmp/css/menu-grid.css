@@ -1,0 +1,73 @@
+.menu-grid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-grid ul li {
+    width: calc(50% - 30px);
+    height: auto;
+    float: left;
+    display: inline-block;
+    margin: 15px;
+}
+.menu-grid ul li div {
+    background-color: #fff;
+}
+.menu-grid ul li {
+    background-color: none !important;
+    font-size: 14px;
+    color: #666;
+}
+.menu-grid ul li div img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.menu-grid ul li div article {
+    width: calc(100% - 40px);
+    height: auto;
+    float: left;
+    padding: 20px;
+    text-align: left;
+}
+.menu-grid ul li div article h3 {
+    margin: 0;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000;
+    height: 50px;
+}
+.menu-grid ul li div article p {
+    margin: 0 0 10px 0;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+.menu-grid ul li div article a:link,
+.menu-grid ul li div article a:visited {
+    color: #910029;
+    font-size: 14px;
+}
+.menu-grid ul li div article a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+#itemList h5 {
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 10px 15px;
+}
+@media screen and (min-width:768px) and (max-width:1150px) {
+    .menu-grid ul li {
+        width: calc(100% - 30px);
+    }
+}
+@media screen and (max-width:767px) {
+    .menu-grid ul li {
+        width: calc(100% - 30px);
+    }
+}

@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{579BF170-78E6-4F38-9308-044BEEADC60F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>thechinesebuffet</RootNamespace>
+    <AssemblyName>thechinesebuffet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="thechinesebuffet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\thechinesebuffet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about-us.html" />
+    <Content Include="admin-portal\bootstrap\css\bootstrap.css" />
+    <Content Include="admin-portal\bootstrap\css\bootstrap.min.css" />
+    <Content Include="admin-portal\plugins\bootstrap-slider\bootstrap-slider.js" />
+    <Content Include="admin-portal\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="apply.html" />
+    <Content Include="App_Data\reouting.xml" />
+    <Content Include="bin\thechinesebuffet.dll" />
+    <Content Include="bin\thechinesebuffet.pdb" />
+    <Content Include="careers.html" />
+    <Content Include="contact-us.html" />
+    <Content Include="css\about-us.css" />
+    <Content Include="css\careers.css" />
+    <Content Include="css\contact-us.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\forms.css" />
+    <Content Include="css\gallery.css" />
+    <Content Include="css\home.css" />
+    <Content Include="css\image-grid.css" />
+    <Content Include="css\images\Ui-icons_222222_256x240.png" />
+    <Content Include="css\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\layout.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\menu-grid.css" />
+    <Content Include="css\navigation.css" />
+    <Content Include="css\others.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme-about-us.css" />
+    <Content Include="css\owl.theme-home.css" />
+    <Content Include="css\stylesheet.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="forgot.html" />
+    <Content Include="gallery.html" />
+    <Content Include="home.html" />
+    <Content Include="images\aboutus\aboutus-team-1.jpg" />
+    <Content Include="images\aboutus\aboutus-team-2.jpg" />
+    <Content Include="images\aboutus\aboutus-team-3.jpg" />
+    <Content Include="images\aboutus\aboutus-team-4.jpg" />
+    <Content Include="images\aboutus\aboutus-team.png" />
+    <Content Include="images\aboutus\Blackpool.jpg" />
+    <Content Include="images\aboutus\Bolton.jpg" />
+    <Content Include="images\aboutus\Bury.jpg" />
+    <Content Include="images\aboutus\Darlington.jpg" />
+    <Content Include="images\aboutus\Halifax.jpg" />
+    <Content Include="images\aboutus\Helens.jpg" />
+    <Content Include="images\aboutus\Hudders-Field.jpg" />
+    <Content Include="images\aboutus\paolo-hu.png" />
+    <Content Include="images\aboutus\peter-wu.png" />
+    <Content Include="images\aboutus\Preston.jpg" />
+    <Content Include="images\aboutus\Wakefield.jpg" />
+    <Content Include="images\aboutus\Wigan.jpg" />
+    <Content Include="images\aboutus\Wrexham.jpg" />
+    <Content Include="images\bgs\aboutus-bg.jpg" />
+    <Content Include="images\bgs\bg-common.jpg" />
+    <Content Include="images\bgs\careers-bg.jpg" />
+    <Content Include="images\bgs\loading.gif" />
+    <Content Include="images\bgs\media-bg.jpg" />
+    <Content Include="images\bgs\menu-bg.jpg" />
+    <Content Include="images\bgs\ourteam-bg.jpg" />
+    <Content Include="images\bgs\special-offers.jpg" />
+    <Content Include="images\gallery\BOL_1.jpg" />
+    <Content Include="images\gallery\BOL_2.jpg" />
+    <Content Include="images\gallery\BOL_3.jpg" />
+    <Content Include="images\gallery\BOL_4.jpg" />
+    <Content Include="images\gallery\BOL_5.jpg" />
+    <Content Include="images\gallery\BOL_6.jpg" />
+    <Content Include="images\gallery\BOL_7.jpg" />
+    <Content Include="images\gallery\BOL_8.jpg" />
+    <Content Include="images\gallery\BOL_9.jpg" />
+    <Content Include="images\gallery\BUR_1.jpg" />
+    <Content Include="images\gallery\BUR_2.jpg" />
+    <Content Include="images\gallery\BUR_3.jpg" />
+    <Content Include="images\gallery\BUR_4.jpg" />
+    <Content Include="images\gallery\BUR_5.jpg" />
+    <Content Include="images\gallery\BUR_6.jpg" />
+    <Content Include="images\gallery\BUR_7.jpg" />
+    <Content Include="images\gallery\BUR_8.jpg" />
+    <Content Include="images\gallery\BUR_9.jpg" />
+    <Content Include="images\gallery\DAR_1.jpg" />
+    <Content Include="images\gallery\DAR_2.jpg" />
+    <Content Include="images\gallery\DAR_3.jpg" />
+    <Content Include="images\gallery\DAR_4.jpg" />
+    <Content Include="images\gallery\DAR_5.jpg" />
+    <Content Include="images\gallery\DAR_6.jpg" />
+    <Content Include="images\gallery\DAR_7.jpg" />
+    <Content Include="images\gallery\DAR_8.jpg" />
+    <Content Include="images\gallery\DAR_9.jpg" />
+    <Content Include="images\gallery\gallery-1.jpg" />
+    <Content Include="images\gallery\gallery-10.jpg" />
+    <Content Include="images\gallery\gallery-11-b.jpg" />
+    <Content Include="images\gallery\gallery-11.jpg" />
+    <Content Include="images\gallery\gallery-12.jpg" />
+    <Content Include="images\gallery\gallery-2.jpg" />
+    <Content Include="images\gallery\gallery-3.jpg" />
+    <Content Include="images\gallery\gallery-4.jpg" />
+    <Content Include="images\gallery\gallery-5.jpg" />
+    <Content Include="images\gallery\gallery-6.jpg" />
+    <Content Include="images\gallery\gallery-7.jpg" />
+    <Content Include="images\gallery\gallery-8.jpg" />
+    <Content Include="images\gallery\gallery-9.jpg" />
+    <Content Include="images\gallery\HAL_1.jpg" />
+    <Content Include="images\gallery\HAL_2.jpg" />
+    <Content Include="images\gallery\HAL_3.jpg" />
+    <Content Include="images\gallery\HAL_4.jpg" />
+    <Content Include="images\gallery\HAL_5.jpg" />
+    <Content Include="images\gallery\HAL_6.jpg" />
+    <Content Include="images\gallery\HAL_7.jpg" />
+    <Content Include="images\gallery\HAL_8.jpg" />
+    <Content Include="images\gallery\HAL_9.jpg" />
+    <Content Include="images\gallery\HUD_1.jpg" />
+    <Content Include="images\gallery\HUD_2.jpg" />
+    <Content Include="images\gallery\HUD_3.jpg" />
+    <Content Include="images\gallery\HUD_4.jpg" />
+    <Content Include="images\gallery\HUD_5.jpg" />
+    <Content Include="images\gallery\HUD_6.jpg" />
+    <Content Include="images\gallery\HUD_7.jpg" />
+    <Content Include="images\gallery\HUD_8.jpg" />
+    <Content Include="images\gallery\HUD_9.jpg" />
+    <Content Include="images\gallery\interior-1.jpg" />
+    <Content Include="images\gallery\interior-10.jpg" />
+    <Content Include="images\gallery\interior-11-b.jpg" />
+    <Content Include="images\gallery\interior-11.jpg" />
+    <Content Include="images\gallery\interior-2-b.jpg" />
+    <Content Include="images\gallery\interior-2.jpg" />
+    <Content Include="images\gallery\interior-3-b.jpg" />
+    <Content Include="images\gallery\interior-3.jpg" />
+    <Content Include="images\gallery\interior-4-b.jpg" />
+    <Content Include="images\gallery\interior-4.jpg" />
+    <Content Include="images\gallery\interior-5-b.jpg" />
+    <Content Include="images\gallery\interior-5.jpg" />
+    <Content Include="images\gallery\interior-6.jpg" />
+    <Content Include="images\gallery\interior-7-b.jpg" />
+    <Content Include="images\gallery\interior-7.jpg" />
+    <Content Include="images\gallery\interior-8-b.jpg" />
+    <Content Include="images\gallery\interior-8.jpg" />
+    <Content Include="images\gallery\interior-9-b.jpg" />
+    <Content Include="images\gallery\interior-9.jpg" />
+    <Content Include="images\gallery\PRE_1.jpg" />
+    <Content Include="images\gallery\PRE_2.jpg" />
+    <Content Include="images\gallery\PRE_3.jpg" />
+    <Content Include="images\gallery\PRE_4.jpg" />
+    <Content Include="images\gallery\PRE_5.jpg" />
+    <Content Include="images\gallery\PRE_6.jpg" />
+    <Content Include="images\gallery\PRE_7.jpg" />
+    <Content Include="images\gallery\PRE_8.jpg" />
+    <Content Include="images\gallery\PRE_9.jpg" />
+    <Content Include="images\gallery\STH_1.jpg" />
+    <Content Include="images\gallery\STH_2.jpg" />
+    <Content Include="images\gallery\STH_3.jpg" />
+    <Content Include="images\gallery\STH_4.jpg" />
+    <Content Include="images\gallery\STH_5.jpg" />
+    <Content Include="images\gallery\STH_6.jpg" />
+    <Content Include="images\gallery\STH_7.jpg" />
+    <Content Include="images\gallery\STH_8.jpg" />
+    <Content Include="images\gallery\STH_9.jpg" />
+    <Content Include="images\gallery\WAK_1.jpg" />
+    <Content Include="images\gallery\WAK_2.jpg" />
+    <Content Include="images\gallery\WAK_3.jpg" />
+    <Content Include="images\gallery\WAK_4.jpg" />
+    <Content Include="images\gallery\WAK_5.jpg" />
+    <Content Include="images\gallery\WAK_6.jpg" />
+    <Content Include="images\gallery\WAK_7.jpg" />
+    <Content Include="images\gallery\WAK_8.jpg" />
+    <Content Include="images\gallery\WAK_9.jpg" />
+    <Content Include="images\gallery\WIG_1.jpg" />
+    <Content Include="images\gallery\WIG_2.jpg" />
+    <Content Include="images\gallery\WIG_3.jpg" />
+    <Content Include="images\gallery\WIG_4.jpg" />
+    <Content Include="images\gallery\WIG_5.jpg" />
+    <Content Include="images\gallery\WIG_6.jpg" />
+    <Content Include="images\gallery\WIG_7.jpg" />
+    <Content Include="images\gallery\WIG_8.jpg" />
+    <Content Include="images\gallery\WIG_9.jpg" />
+    <Content Include="images\gallery\WREX_1.jpg" />
+    <Content Include="images\gallery\WREX_2.jpg" />
+    <Content Include="images\gallery\WREX_3.jpg" />
+    <Content Include="images\gallery\WREX_4.jpg" />
+    <Content Include="images\gallery\WREX_5.jpg" />
+    <Content Include="images\gallery\WREX_6.jpg" />
+    <Content Include="images\gallery\WREX_7.jpg" />
+    <Content Include="images\gallery\WREX_8.jpg" />
+    <Content Include="images\gallery\WREX_9.jpg" />
+    <Content Include="images\home\banner-other-divider.jpg" />
+    <Content Include="images\home\bg1.jpg" />
+    <Content Include="images\home\bg2.jpg" />
+    <Content Include="images\home\bg3.jpg" />
+    <Content Include="images\home\bg4.jpg" />
+    <Content Include="images\home\bg5.jpg" />
+    <Content Include="images\home\special-offers1.jpg" />
+    <Content Include="images\home\sponsor1.jpg" />
+    <Content Include="images\layout\accordion-down.png" />
+    <Content Include="images\layout\accordion-up.png" />
+    <Content Include="images\layout\down-arrow.png" />
+    <Content Include="images\layout\fb-share.jpg" />
+    <Content Include="images\layout\heading-bg.png" />
+    <Content Include="images\layout\next-arrow.png" />
+    <Content Include="images\layout\prev-arrow.png" />
+    <Content Include="images\layout\square-logo.jpg" />
+    <Content Include="images\layout\the-chinese-buffet-logo.png" />
+    <Content Include="images\layout\twitter-share.jpg" />
+    <Content Include="images\media\media-1.jpg" />
+    <Content Include="images\media\media-2.jpg" />
+    <Content Include="images\media\media-3.jpg" />
+    <Content Include="images\media\media-4.jpg" />
+    <Content Include="images\media\media-5.jpg" />
+    <Content Include="images\menu\menu-1.jpg" />
+    <Content Include="images\menu\menu-2.jpg" />
+    <Content Include="images\menu\menu-3.jpg" />
+    <Content Include="images\menu\menu-4.jpg" />
+    <Content Include="images\menu\menu-5.jpg" />
+    <Content Include="images\menu\menu-6.jpg" />
+    <Content Include="images\menu\menu-7.jpg" />
+    <Content Include="images\menu\menu-8.jpg" />
+    <Content Include="images\restaurants\Blackpool\BLA_1.jpg" />
+    <Content Include="images\restaurants\Blackpool\BLA_2.jpg" />
+    <Content Include="images\restaurants\Blackpool\BLA_3.jpg" />
+    <Content Include="images\restaurants\Blackpool\BLA_4.jpg" />
+    <Content Include="images\restaurants\Blackpool\BLA_5.jpg" />
+    <Content Include="images\restaurants\Blackpool\gallery-5-b.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_10.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_11.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_12.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_13.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_14.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_15.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_16.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_17.jpg" />
+    <Content Include="images\restaurants\Bolton\BOL_9.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_10.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_11.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_12.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_13.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_14.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_15.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_16.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_17.jpg" />
+    <Content Include="images\restaurants\Bury\BUR_18.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_10.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_11.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_12.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_13.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_14.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_15.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_16.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_17.jpg" />
+    <Content Include="images\restaurants\Darlington\DAR_18.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_10.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_11.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_12.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_13.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_14.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_15.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_16.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_17.jpg" />
+    <Content Include="images\restaurants\Halifax\HAL_18.jpg" />
+    <Content Include="images\restaurants\Huddersfield\carbonphoto_chinesebuffet_058.jpg" />
+    <Content Include="images\restaurants\Huddersfield\CBuffet-001.jpg" />
+    <Content Include="images\restaurants\Huddersfield\CBuffet-023.jpg" />
+    <Content Include="images\restaurants\Huddersfield\CBuffet-025.jpg" />
+    <Content Include="images\restaurants\Huddersfield\Chinese buffet 2 128.jpg" />
+    <Content Include="images\restaurants\Huddersfield\Chinese buffet 2 90.jpg" />
+    <Content Include="images\restaurants\Huddersfield\huddersfield 2.jpg" />
+    <Content Include="images\restaurants\Huddersfield\huddersfield opening2.jpg" />
+    <Content Include="images\restaurants\Huddersfield\Huddersfield.jpg" />
+    <Content Include="images\restaurants\Huddersfield\HUD_10.jpg" />
+    <Content Include="images\restaurants\Huddersfield\HUD_11.jpg" />
+    <Content Include="images\restaurants\Huddersfield\wrexhan kitchen staff.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_10.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_11.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_12.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_13.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_14.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_15.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_16.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_17.jpg" />
+    <Content Include="images\restaurants\Preston\PRE_18.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_10.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_11.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_12.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_13.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_14.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_15.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_16.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_17.jpg" />
+    <Content Include="images\restaurants\St Helens\STH_18.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_10.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_11.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_12.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_13.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_14.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_15.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_16.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_17.jpg" />
+    <Content Include="images\restaurants\Wakefield\WAK_18.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_10.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_11.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_12.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_13.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_14.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_15.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_16.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_17.jpg" />
+    <Content Include="images\restaurants\Wigan\WIG_18.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_10.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_11.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_12.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_13.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_14.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_15.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_16.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_17.jpg" />
+    <Content Include="images\restaurants\Wrexham\WREX_18.jpg" />
+    <Content Include="images\special-offers\offers-1.jpg" />
+    <Content Include="images\special-offers\offers-2.jpg" />
+    <Content Include="images\special-offers\offers-3.jpg" />
+    <Content Include="images\special-offers\offers-4.jpg" />
+    <Content Include="images\special-offers\offers-5.jpg" />
+    <Content Include="images\special-offers\offers-6.jpg" />
+    <Content Include="images\special-offers\pink-hover-media.png" />
+    <Content Include="images\special-offers\pink-hover.png" />
+    <Content Include="index.html" />
+    <Content Include="js\accordion.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\jquery-1.10.2.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.cookies.js" />
+    <Content Include="js\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="js\jspostcode.js" />
+    <Content Include="js\jstelnumbers.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\masonry.pkgd.min.js" />
+    <Content Include="js\others.js" />
+    <Content Include="js\owl.carousel.js" />
+    <Content Include="js\SmartBox.js" />
+    <Content Include="login.html" />
+    <Content Include="media.html" />
+    <Content Include="menu.html" />
+    <Content Include="Notification.aspx" />
+    <Content Include="old_about-us.html" />
+    <Content Include="old_apply.html" />
+    <Content Include="old_careers.html" />
+    <Content Include="old_forgot.html" />
+    <Content Include="old_gallery.html" />
+    <Content Include="old_home.html" />
+    <Content Include="old_login.html" />
+    <Content Include="old_media.html" />
+    <Content Include="old_menu.html" />
+    <Content Include="old_ontact-us.html" />
+    <Content Include="old_payment.html" />
+    <Content Include="old_reservations.html" />
+    <Content Include="old_restaurants.html" />
+    <Content Include="old_signup.html" />
+    <Content Include="old_special-offers.html" />
+    <Content Include="old_terms-conditions.html" />
+    <Content Include="orderFailed.aspx" />
+    <Content Include="PaymentSuccess.aspx" />
+    <Content Include="reservations.html" />
+    <Content Include="restaurants.html" />
+    <Content Include="services\getImage.aspx" />
+    <Content Include="signup.html" />
+    <Content Include="source\blank.gif" />
+    <Content Include="source\fancybox_loading%402x.gif" />
+    <Content Include="source\fancybox_loading.gif" />
+    <Content Include="source\fancybox_overlay.png" />
+    <Content Include="source\fancybox_sprite%402x.png" />
+    <Content Include="source\fancybox_sprite.png" />
+    <Content Include="source\helpers\fancybox_buttons.png" />
+    <Content Include="source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="source\helpers\jquery.fancybox-media.js" />
+    <Content Include="source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="source\jquery.fancybox.css" />
+    <Content Include="source\jquery.fancybox.js" />
+    <Content Include="source\jquery.fancybox.pack.js" />
+    <Content Include="special-offers.html" />
+    <Content Include="terms-conditions.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Confirm.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
+    <Compile Include="Notification.aspx.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notification.aspx.designer.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="orderFailed.aspx.cs">
+      <DependentUpon>orderFailed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="orderFailed.aspx.designer.cs">
+      <DependentUpon>orderFailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentSuccess.aspx.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSuccess.aspx.designer.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\data.ashx.cs">
+      <DependentUpon>data.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="services\getImage.aspx.cs">
+      <DependentUpon>getImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services\getImage.aspx.designer.cs">
+      <DependentUpon>getImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin-portal\bootstrap\css\bootstrap.css.map" />
+    <Content Include="admin-portal\connection.php" />
+    <Content Include="admin-portal\error_log" />
+    <Content Include="admin-portal\index.php" />
+    <Content Include="admin-portal\login.php" />
+    <Content Include="admin-portal\menu-add.php" />
+    <Content Include="admin-portal\menu-view.php" />
+    <Content Include="admin-portal\pwd.php" />
+    <Content Include="admin-portal\sign-out.php" />
+    <Content Include="admin-portal\userdetails.php" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="packages.config" />
+    <Content Include="services\data.ashx" />
+    <Content Include="source\helpers\Thumbs.db" />
+    <Content Include="source\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\thechinesebuffet.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="admin-portal\pages\forms\" />
+    <Folder Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5164/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,154 @@
+.contactus .map {
+    margin: 20px 0;
+}
+.contactus section {
+    width: 550px;
+    height: auto;
+    float: left;
+}
+.contactus section .left-heading {
+    width: 340px;
+    height: 70px;
+    float: left;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 17px 0 0 0;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    background: url(../images/layout/heading-bg.png) no-repeat top center;
+}
+.contactus section p {
+    font-size: 12px;
+}
+.contactus aside {
+    width: 300px;
+    height: auto;
+    float: right;
+    margin: 0;
+}
+.contactus aside a:link,
+.contactus aside a:visited {
+    color: #333;
+}
+.contactus section .form-row {
+    width: calc(33.3333% - 15px);
+    height: auto;
+    float: left;
+}
+.contactus section .form-row.last {
+    margin: 0 !important;
+}
+.contactus section .form-row input[type="text"],
+.contactus section .form-row input[type="email"] {
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+.contactus section .form-row input[type="text"]:focus,
+.contactus section .form-row input[type="email"]:focus {
+    box-shadow: 0 0 5px rgba(210, 25, 81, 1);
+    border: 1px solid rgba(210, 25, 81, 1);
+}
+.contactus section .form-row-all {
+    width: calc(100% - 37px);
+    height: auto;
+    float: left;
+}
+.contactus section .form-row-all textarea {
+    width: calc(100% - 2px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    resize: vertical;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+.contactus section .form-row-all textarea:focus {
+    box-shadow: 0 0 5px rgba(210, 25, 81, 1);
+    border: 1px solid rgba(210, 25, 81, 1);
+}
+.contactus section .form-row-all input[type="submit"] {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #910029;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.contactus section .form-row-all input[type="submit"]:hover {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.contactus section address {
+    font-style: normal;
+    font-size: 14px;
+    color: #000;
+    margin: 25px 0 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+.contactus section address span {
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+}
+@media screen and (min-width:768px) and (max-width:1150px) {
+    .contactus section {
+        width: 100%;
+    }
+    .contactus section .left-heading {
+        width: 100%;
+        height: 70px;
+        padding: 0;
+        color: #910029;
+        font-weight: 600;
+        background: none;
+    }
+    .contactus section .form-row {
+        width: calc(100% - 15px);
+    }
+}
+@media screen and (max-width:767px) {
+    .contactus section {
+        width: 100%;
+    }
+    .contactus section .left-heading {
+        width: 100%;
+        height: 70px;
+        padding: 0;
+        color: #910029;
+        font-weight: 600;
+        background: none;
+    }
+    .contactus section .form-row {
+        width: calc(100% - 15px);
+    }
+    .contactus aside {
+        width: 300px;
+        float: left;
+        margin: 20px 0;
+    }
+}

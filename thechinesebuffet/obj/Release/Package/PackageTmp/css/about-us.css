@@ -1,0 +1,66 @@
+.teams .members {
+    width: 255px;
+    height: auto;
+    min-height: 200px;
+    float: left;
+    margin: 0 10px 0 250px;
+    padding: 0;
+}
+.teams .members .member-details {
+    width: calc(100% - 30px);
+    height: auto;
+    float: left;
+    margin: 0 15px;
+}
+.teams .members img {
+    width: 100%;
+    height: auto;
+    float: left;
+    opacity: 1;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.teams .members img:hover {
+    opacity: 0.7;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.teams .members h3 {
+    color: #910029;
+    font-size: 26px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px 0 5px 0;
+}
+.teams .members h3 a:link,
+.teams .members h3 a:visited {
+    color: #910029;
+}
+.teams .members h3 a:hover {
+    color: #333;
+}
+.teams .members p {
+    color: #000;
+    font-size: 13px;
+    margin: 10px 0;
+}
+@media screen and (min-width:768px) and (max-width:1150px) {
+    .teams .members {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 50px 0;
+    }
+}
+@media screen and (max-width:767px) {
+    .teams .members {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 50px 0;
+    }
+}

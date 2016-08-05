@@ -1,0 +1,90 @@
+.job-location,
+.jobtitle {
+    width: 30%;
+    height: auto;
+    float: left;
+}
+.accordion-main-title {
+    width: calc(100% - 30px);
+    height: auto;
+    float: left;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/*----- Accordion -----*/
+
+.accordion,
+.accordion * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.accordion {
+    overflow: hidden;
+    background: #fff;
+}
+
+/*----- Section Titles -----*/
+
+.accordion-section-title {
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+    border-top: 1px solid #910029;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url(../images/layout/accordion-up.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    transition: all linear 0.15s;
+    font-size: 15px;
+    color: #000;
+}
+.accordion-section-title.active,
+.accordion-section-title:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000;
+    background-image: url(../images/layout/accordion-down.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    text-decoration: none;
+}
+.accordion-section:last-child .accordion-section-title {
+    border-bottom: none;
+}
+
+/*----- Section Content -----*/
+
+.accordion-section-content {
+    padding: 15px;
+    display: none;
+}
+.accordion-section-content h4 {
+    color: #910029;
+    font-size: 16px;
+    font-weight: normal;
+}
+.accordion-section-content p {
+    color: #666;
+    line-height: 20px;
+    font-size: 13px;
+}
+.accordion-section-content a:link,
+.accordion-section-content a:visited {
+    color: #910029;
+}
+.accordion-section-content a:hover {
+    color: #000;
+}
+.apply {
+    padding: 5px 10px;
+    background-color: #910029;
+    margin-bottom: 30px;
+}
+.apply a:link,
+.apply a:visited {
+    color: #fff;
+}
+@media screen and (min-width:768px) and (max-width:1150px) {}
+@media screen and (max-width:767px) {}

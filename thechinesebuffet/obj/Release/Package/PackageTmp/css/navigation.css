@@ -1,0 +1,178 @@
+nav ul {
+    list-style: none;
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    display: block;
+}
+nav ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a:link,
+nav ul li a:visited {
+    display: block;
+    color: #c9c9c9;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0;
+    margin: 28px 0 0 15px;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: #910029;
+}
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 15px 0 0 0;
+}
+nav ul li ul li {
+    margin: 0;
+    padding: 5px 15px;
+    float: none;
+    background: #fff;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -khtml-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    -moz-box-shadow: 1px 1px 2px #333;
+    -webkit-box-shadow: 3px 3px 4px #333;
+    box-shadow: 1px 1px 2px #333;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=190, Color='#333333')";
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=1, Direction=190, Color='#333333');
+}
+nav ul li ul li:hover,
+nav ul li ul li.active {
+    background: #910029;
+}
+nav ul li ul li a:link,
+nav ul li ul li a:visited {
+    color: #333;
+    margin: 0;
+}
+nav ul li ul li a:hover {
+    color: #fff;
+    margin: 0;
+}
+nav ul li ul li a.active {
+    color: #fff;
+    margin: 0;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+.responsive-btn {
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    top: 105px;
+    right: 10px;
+    background-color: #910029;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    padding: 6px 0 0 0;
+    cursor: pointer;
+    display: none;
+    z-index: 8000;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.responsive-btn:hover {
+    background-color: #fff;
+    color: #111;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.responsive-menu {
+    display: none;
+    width: 250px;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 40px;
+    right: -300px;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.responsive-menu .resclose {
+    width: 30px;
+    height: 30px;
+    float: left;
+    color: #fff;
+    margin: 0 0 10px 0;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.responsive-menu .resclose:hover {
+    color: #ffb411;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.responsive-menu a:link,
+.responsive-menu a:visited {
+    width: 100%;
+    height: auto;
+    float: left;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 14px;
+    padding: 0 0 5px 0;
+    border-bottom: 1px dotted #fff;
+}
+.responsive-menu a:hover,
+.responsive-menu a.active {
+    color: #910029;
+}
+.responsive-menu a.inner-link {
+    font-size: 12px;
+    width: calc(100% - 20px);
+    margin: 10px 10px 10px 20px;
+}
+
+/*Responsive - Tab*/
+
+@media screen and (min-width:768px) and (max-width:1150px) {
+    nav ul {
+        display: none;
+    }
+    .responsive-btn {
+        display: block;
+    }
+}
+
+/*Responsive - Mobile*/
+
+@media screen and (max-width:767px) {
+    nav ul {
+        display: none;
+    }
+    .responsive-btn {
+        display: block;
+    }
+}

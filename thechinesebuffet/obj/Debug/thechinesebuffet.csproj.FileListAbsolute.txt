@@ -1,0 +1,5 @@
+D:\Projects\thechinesebuffet\thechinesebuffet\bin\thechinesebuffet.pdb
+D:\Projects\thechinesebuffet\thechinesebuffet\obj\Debug\thechinesebuffet.dll
+D:\Projects\thechinesebuffet\thechinesebuffet\obj\Debug\thechinesebuffet.pdb
+D:\Projects\thechinesebuffet\thechinesebuffet\bin\Newtonsoft.Json.xml
+D:\Projects\thechinesebuffet\thechinesebuffet\obj\Debug\thechinesebuffet.csprojResolveAssemblyReference.cache
